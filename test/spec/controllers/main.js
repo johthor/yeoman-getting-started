@@ -34,4 +34,10 @@ describe('Controller: MainCtrl', function () {
     expect(scope.todos.length).toBe(0);
   });
 
+  it('should add the same item to the list twice', function () {
+    scope.todo = 'Test 1';
+    scope.addTodo();
+    scope.addTodo();
+    expect(scope.todos.length).toBe(2);
+  });
 });

@@ -13,7 +13,7 @@
   </form>
 
   <div ui-sortable ng-model="todos">
-    <p class="input-group todoEntity" ng-repeat="todo in todos">
+    <p class="input-group todoEntity" ng-repeat="todo in todos track by $index">
       <input type="text" ng-model="todo" class="form-control">
       <span class="input-group-btn">
         <button class="btn btn-danger" ng-click="removeTodo($index)" aria-label="Remove">X</button>
