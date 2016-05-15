@@ -81,3 +81,8 @@ body {
     border-bottom: 0;
   }
 }
+
+.todoEntity {
+  padding: 5px 10px;
+  cursor: move;
+}
