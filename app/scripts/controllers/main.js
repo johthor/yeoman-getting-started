@@ -14,4 +14,8 @@ angular.module('mytodoApp')
       'Read AngularJS book',
       'Read TDD/BDD book'
     ];
+    $scope.addTodo = function() {
+      $scope.todos.push($scope.todo);
+      $scope.todo = '';
+    };
   });
