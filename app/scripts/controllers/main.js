@@ -8,10 +8,10 @@
  * Controller of the mytodoApp
  */
 angular.module('mytodoApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
+  .controller('MainCtrl', function ($scope) {
+    $scope.todos = [
+      'Read HTML5 book',
+      'Read AngularJS book',
+      'Read TDD/BDD book'
     ];
   });
