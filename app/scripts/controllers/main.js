@@ -9,11 +9,7 @@
  */
 angular.module('mytodoApp')
   .controller('MainCtrl', function ($scope) {
-    $scope.todos = [
-      'Read HTML5 book',
-      'Read AngularJS book',
-      'Read TDD/BDD book'
-    ];
+    $scope.todos = [];
     $scope.addTodo = function() {
       $scope.todos.push($scope.todo);
       $scope.todo = '';
