@@ -1,5 +1,6 @@
 'use strict';
 
+
 describe('Controller: MainCtrl', function () {
 
   // load the controller's module
@@ -8,12 +9,28 @@ describe('Controller: MainCtrl', function () {
   var MainCtrl,
     scope;
 
+  var store = {};
+
+  var mockLocalStorageService = {
+    get: function (key) {
+      if(store.hasOwnProperty(key)) {
+        return store[key];
+      } else {
+        return undefined;
+      }
+    },
+    set: function (key, value) {
+      store[key] = value;
+    }
+  };
+
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
     MainCtrl = $controller('MainCtrl', {
-      $scope: scope
+      $scope: scope,
       // place here mocked dependencies
+      localStorageService: mockLocalStorageService
     });
   }));
 
